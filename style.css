@@ -1,0 +1,233 @@
+/* Spanner - by Carlos Melegrito */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* --- Typography --- */
+
+html {
+    font-size: 80%;
+    line-height: 1.33;
+    font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', sans-serif;
+    
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    -webkit-text-size-adjust: 100%;
+
+    color: #DCDADC;
+    background-color: #091922;
+	background-image:
+		radial-gradient(
+			circle at top left,
+			#07374C, 
+			transparent 100%
+		),
+		radial-gradient(
+			circle at top right,
+			#13403D, 
+			transparent 100%
+		),
+		radial-gradient(
+			at bottom left,
+			#46223B, 
+			transparent 100%
+		),
+		radial-gradient(
+			at bottom right,
+			#41402D,
+			transparent 100%
+		);
+	background-size: cover;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+		
+}
+
+h1 {
+    font-weight: 800;
+    font-size: 3rem;
+    line-height: 1.16;
+    color: white;
+}
+
+p {
+    font-size: 1.5rem;
+}
+
+a {
+    font-weight: 600;
+    text-decoration: none;
+
+    padding: 0.5em;
+    display: inline-block;
+    
+    color: black;
+    background-color: white;
+    border-radius: 0.33em;
+}
+
+/* --- Layout --- */
+
+body {
+    max-width: 720px;
+    margin: 2rem;
+    text-align: center;
+}
+
+@supports(padding: max(0px)) {
+    body {
+        margin-left: max(2rem, env(safe-area-inset-left));
+        margin-right: max(2rem, env(safe-area-inset-right));
+    }
+}
+
+header {
+    margin-bottom: 4rem;
+}
+
+header img {
+    margin-bottom: 1rem;
+	max-width: 8rem;
+}
+
+header h1 {
+    margin-bottom: 0.5rem;
+}
+
+header p {
+    color: #70B5D4;
+}
+
+section {
+	max-width: 360px;
+	margin: 0 auto;
+} 
+
+figure {
+    margin: 0 auto 4rem;
+    position: relative;
+	width: 100%;
+	padding-top: 77.22%;
+	overflow: hidden;
+	border-radius: 4.66px;
+	box-shadow: 0 0 20px 0 rgba(0,0,0,0.15), 0 25px 40px 0 rgba(0,0,0,0.25);
+}
+
+figure img {
+    position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	max-width: 100%;
+}
+
+nav {
+    margin-bottom: 2rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+nav a {
+    font-size: 1.5rem;
+    min-width: 240px;
+    margin-bottom: 1rem;
+}
+
+nav a:after {
+    content: '';
+    display: inline-block;
+    vertical-align: middle;
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-left: 0.5rem;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+a.primary:after {
+    margin-top: -0.25rem;
+    background-image: url(images/download.svg);
+}
+
+a.secondary {
+    color: white;
+    box-shadow: 0 0 0 1px rgba(255,255,255,0.1) inset;
+    background-color: rgba(255,255,255,0.1);
+}
+
+a.secondary:after {
+    margin-top: -0.25rem;
+    width: 1.75rem;
+    height: 1.75rem;
+    background-image: url(images/hugo.svg);
+}
+
+footer {
+    margin-top: 2rem;
+}
+
+footer a {
+    color: rgba(255,255,255, 0.5);
+    background-color: transparent;
+    transition: background-color 0.1s ease-in-out;
+}
+
+footer a:hover {
+    background-color: rgba(255,255,255, 0.05);
+}
+
+/* --- Media Queries --- */
+
+@media (min-width: 848px) {
+
+    html {
+        font-size: 100%;
+    }
+
+    body {
+        margin: 4rem auto;
+    }
+	
+	header {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+	
+	header img {
+		margin-right: 2rem;
+		margin-top: 1rem;
+	}
+	
+	header div {
+		text-align: left;
+	}
+	
+	figure {
+		margin-bottom: 6rem;
+	}
+
+    nav {
+        flex-direction: row;
+        margin-bottom: 3rem;
+    }
+
+    nav a {
+        margin-left: 1.25rem;
+        margin-right: 1.25rem;
+    }
+
+    p > span {
+        display: block;
+    }
+
+    footer {
+        margin-top: 4rem;
+    }
+}
