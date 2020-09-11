@@ -16,7 +16,6 @@
         <meta property="twitter:site" content="@cjmlgrto">
         
         <link rel="stylesheet" href="style.css"/>
-
         <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon"/>
         <link rel="apple-touch-icon" href="images/icon.png"/>
     </head>
@@ -28,10 +27,21 @@
 	            <p>Start Hugo in a click</p>
 			</div>
         </header>
-
 		<section>
 	        <figure>
-	            <img src="images/hero.jpg" alt="Screen shot of Spanner"/>
+				<img src="images/hero.jpg">
+				<video id="spinner" autobuffer preload playsinline autoplay loop>
+					<source type="video/mp4" src="images/spinner.mp4">
+				</video>
+				<video id="intro" autobuffer preload playsinline autoplay>
+					<source type="video/mp4" src="images/intro.mp4">
+				</video>
+				<script type="text/javascript">
+					const intro = document.getElementById('intro');
+					intro.addEventListener('ended', function() {
+						intro.style.display = "none";
+					}, false);
+				</script>
 	        </figure>
 		</section>
 
