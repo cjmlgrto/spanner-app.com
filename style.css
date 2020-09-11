@@ -27,12 +27,12 @@ html {
 		),
 		radial-gradient(
 			circle at top right,
-			#13403D, 
+			#266356, 
 			transparent 100%
 		),
 		radial-gradient(
 			circle at bottom left,
-			#46223B, 
+			#5F294E, 
 			transparent 100%
 		),
 		radial-gradient(
@@ -40,7 +40,7 @@ html {
 			#41402D,
 			transparent 100%
 		);
-	background-size: cover;
+	background-size: 100% 100%;
 	background-attachment: fixed;
 	background-repeat: no-repeat;
 		
