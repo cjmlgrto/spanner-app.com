@@ -147,6 +147,15 @@ figure video {
 	left: calc(274 / 360 * 100%);
 }
 
+article {
+	margin: 0 auto;
+	max-width: 420px;
+}
+
+article p {
+	margin-bottom: 1rem;
+}
+
 nav {
     margin-bottom: 2rem;
     display: flex;
@@ -226,6 +235,10 @@ footer a:hover {
 	
 	header div {
 		text-align: left;
+	}
+	
+	.simple {
+		flex-direction: column;
 	}
 	
 	figure {
