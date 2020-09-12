@@ -30,17 +30,28 @@
         </header>
 		<section>
 	        <figure>
-				<img src="images/hero.jpg" alt="A screen shot of Spanner's main window">
-				<video id="spinner" autobuffer preload playsinline autoplay loop>
+				<img src="images/hero.jpg" alt="Spanner in action">
+				<img src="images/intro.jpg" alt="Spanner ready for action" id="intro-image">
+				
+				<video id="spinner" autobuffer preload playsinline autoplay loop style="opacity:0">
 					<source type="video/mp4" src="images/spinner.mp4">
 				</video>
-				<video id="intro" autobuffer preload playsinline autoplay>
+				<video id="intro-video" autobuffer preload playsinline autoplay>
 					<source type="video/mp4" src="images/intro.mp4">
 				</video>
+				
 				<script type="text/javascript">
-					const intro = document.getElementById('intro');
-					intro.addEventListener('ended', function() {
-						intro.style.display = "none";
+					const image = document.getElementById('intro-image');
+					const video = document.getElementById('intro-video');
+					const spinner = document.getElementById('spinner');
+
+					video.addEventListener('loadeddata', function() {
+						image.style.display = 'none';
+						spinner.style.opacity = '1';
+					}, false);
+				
+					video.addEventListener('ended', function() {
+						video.style.display = 'none';
 					}, false);
 				</script>
 	        </figure>
