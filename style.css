@@ -53,6 +53,11 @@ h1 {
     color: white;
 }
 
+h2 {
+	color: white;
+	margin-bottom: 1rem;
+}
+
 p {
     font-size: 1.5rem;
 }
@@ -156,6 +161,10 @@ article p {
 	margin-bottom: 1rem;
 }
 
+article:not(:first-child) {
+	margin-top: 2rem;
+}
+
 nav {
     margin-bottom: 2rem;
     display: flex;
@@ -239,6 +248,10 @@ footer a:hover {
 	
 	.simple {
 		flex-direction: column;
+	}
+	
+	article:not(:first-child) {
+		margin-top: 4rem;
 	}
 	
 	figure {
