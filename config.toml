@@ -1,0 +1,8 @@
+# Site Configuration
+
+title = "Spanner for Mac"
+baseurl = "https://spanner-app.com"
+
+[params]
+	author = "Carlos Melegrito"
+	description = "Spanner for Mac lets you start a Hugo server in a click"

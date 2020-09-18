@@ -1,0 +1,39 @@
+{{ define "main" }}
+<main>
+	<section>
+		<figure>
+			<img src="images/hero.jpg" alt="Spanner in action">
+			<img src="images/intro.jpg" alt="Spanner ready for action" id="intro-image">
+			
+			<video id="spinner" autobuffer preload playsinline autoplay loop style="opacity:0">
+				<source type="video/mp4" src="images/spinner.mp4">
+			</video>
+			<video id="intro-video" autobuffer preload playsinline autoplay>
+				<source type="video/mp4" src="images/intro.mp4">
+			</video>
+			
+			<script type="text/javascript">
+				const image = document.getElementById('intro-image');
+				const video = document.getElementById('intro-video');
+				const spinner = document.getElementById('spinner');
+
+				video.addEventListener('loadeddata', function() {
+					image.style.display = 'none';
+					spinner.style.opacity = '1';
+				}, false);
+			
+				video.addEventListener('ended', function() {
+					video.style.display = 'none';
+				}, false);
+			</script>
+		</figure>
+	</section>
+
+	<nav>
+		<a href="https://apps.apple.com/us/app/id1531557702" class="primary">Download</a>
+		<a href="https://github.com/cjmlgrto/spanner-hugo-example/archive/main.zip" class="secondary" target="_blank">Get Example</a>
+	</nav>
+	
+	{{ .Content }}
+</main>
+{{ end }}
