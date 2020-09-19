@@ -1,5 +1,5 @@
 +++
-title = "Support"
+title = "Common Questions"
 +++
 
 ## What is Hugo?
@@ -16,11 +16,11 @@ Drag and drop a Hugo site. Then, you can start/stop a local Hugo server, or even
 
 ## Do I need to install Hugo to use Spanner?
 
-Nope. Spanner comes with the latest major version of Hugo. Currently, it's bundled with version 0.74.
+Nope. Spanner comes with the latest major version of Hugo. Currently, it's bundled with [version 0.74](https://github.com/gohugoio/hugo/releases/tag/v0.74.0).
 
 ## How do I build a Hugo website?
 
-You can learn to do that via Hugo's official website. It has extensive documentation for templating, managing content, and troubleshooting.
+You can learn to do that via [Hugo's official website](https://gohugo.io/documentation/). It has extensive documentation for templating, managing content, and troubleshooting.
 
 ## I still need help!
 
