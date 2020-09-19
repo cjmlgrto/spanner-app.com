@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+	<head>
+		<title>{{ .Site.Title }}</title>
+		
+		<meta charset="utf-8"/>
+		<meta name="author" content="{{ .Site.Params.Author }}"/>
+		<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+		<meta name="description" content="{{ .Site.Params.Description }}"/>
+		
+		<meta property="og:type" content="website"/>
+		<meta property="og:url" content="{{ .Site.BaseURL }}"/>
+		<meta property="og:title" content="{{ .Site.Title }}"/>
+		<meta property="og:site_name" content="{{ .Site.Title }}"/>
+		<meta property="og:description" content="{{ .Site.Params.Description }}"/>
+		<meta property="og:image" content="{{ .Site.BaseURL }}/header.jpg"/>
+		
+		<meta property="twitter:card" content="summary">
+		<meta property="twitter:url" content="{{ .Site.BaseURL }}">
+		<meta property="twitter:title" content="{{ .Site.Title }}">
+		<meta property="twitter:description" content="{{ .Site.Params.Description }}">
+		<meta property="twitter:image" content="{{ .Site.BaseURL }}/header.jpg">
+		<meta property="twitter:site" content="@cjmlgrto">
+		
+		<link rel="stylesheet" href="/style.css"/>
+		<link rel="shortcut icon" href="/images/icon.png"/>
+		<link rel="apple-touch-icon" href="/images/site-icon.png"/>
+		<link rel="mask-icon" href="/images/mask.svg" color="3595BD"/>
+	</head>
+	<body>
+		{{ partial "header.html" . }}
+		
+		{{ block "main" . }}
+		<main>
+			{{ .Content }}
+		</main>
+		{{ end }}
+		
+		{{ partial "footer.html" . }}
+	</body>
+</html>

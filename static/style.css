@@ -1,0 +1,267 @@
+/* Spanner - by Carlos Melegrito */
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+	font-size: 16px;
+	line-height: 1.33;
+	font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', sans-serif;
+	
+	text-rendering: optimizeLegibility;
+	-webkit-text-size-adjust: 100%;
+	-webkit-font-smoothing: antialiased;
+	
+	color: rgba(255,255,255,0.8);
+	background-color: #091922;
+	
+	background-image:
+		radial-gradient(
+			circle at top left,
+			#07374C, 
+			transparent 100%
+		),
+		radial-gradient(
+			circle at top right,
+			#266356, 
+			transparent 100%
+		),
+		radial-gradient(
+			circle at bottom left,
+			#5F294E, 
+			transparent 100%
+		),
+		radial-gradient(
+			circle at bottom right,
+			#41402D,
+			transparent 100%
+		);
+	background-size: 100% 100%;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+}
+
+/* --- Typography --- */
+
+h1, h2, h3 {
+	font-weight: 600;
+	line-height: 1.25;
+	margin-bottom: 1.25rem;
+	color: white;
+}
+
+h1 {
+	font-size: 2rem;
+}
+
+h2 {
+	font-size: 1.25rem;
+}
+
+* + h2, * + h3 {
+	margin-top: 2.5rem;
+}
+
+p {
+	margin-bottom: 1.25rem;
+}
+
+a {
+	font-weight: 600;
+	color: white;
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+/* --- Layout --- */
+
+body {
+	margin: 0 auto;
+	padding: 1rem;
+	max-width: 640px;
+}
+
+main > h1 {
+	text-align: center;
+	margin-bottom: 2.5rem;
+}
+
+/* --- Home page (_default/index.html) --- */
+
+#demo {
+	margin: 0 auto;
+	max-width: 360px;
+}
+
+figure {
+	position: relative;
+	overflow: hidden;
+	
+	padding-top: 77.22%;
+	margin-bottom: 4rem;
+	
+	border-radius: 4.66px;
+	box-shadow: 0 0 20px 0 rgba(0,0,0,0.15), 0 25px 32px 0 rgba(0,0,0,0.25);
+}
+
+figure img, figure video {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	max-width: 100%;
+}
+
+#spinner {
+	height: calc(18 / 278 * 100%);
+	width: calc(18 / 360 * 100%);
+	top: calc(217 / 278 * 100%);
+	left: calc(274 / 360 * 100%);
+}
+
+#links {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	text-align: center;
+	margin-bottom: 2rem;
+}
+
+#links a {
+	font-weight: 600;
+	min-width: 240px;
+	margin-bottom: 1rem;
+
+	padding: 0.5em;
+	display: inline-block;
+	
+	color: black;
+	background-color: white;
+	border-radius: 0.33em;
+}
+
+#links a:hover {
+	text-decoration: none;
+}
+
+#links a:after {
+	content: '';
+	display: inline-block;
+	vertical-align: middle;
+	width: 1rem;
+	height: 1rem;
+	margin-left: 0.5rem;
+	margin-top: -0.25rem;
+	background-size: 100%;
+	background-repeat: no-repeat;
+}
+
+#links .example {
+	color: white;
+	box-shadow: 0 0 0 1px rgba(255,255,255,0.1) inset;
+	background-color: rgba(255,255,255,0.1);
+}
+
+#links .download:after {
+	background-image: url(images/download.svg);
+}
+
+#links .example:after {
+	background-image: url(images/folder.svg);
+}
+
+#content {
+	max-width: 500px;
+	margin: 0 auto;
+	text-align: center;
+}
+
+/* --- Header (partials/header.html) --- */
+
+header {
+	text-align: center;
+	margin-bottom: 4rem;
+}
+
+header img {
+	width: 128px;
+	height: 128px;
+}
+
+header h1 {
+	font-weight: 800;
+	margin-bottom: 0.25rem;
+}
+
+header p {
+	margin-bottom: 0;
+	color: #6BB0D5;
+}
+
+/* --- Footer (partials/footer.html) --- */
+
+footer {
+	text-align: center;
+	margin-top: 2rem;
+	margin-bottom: 2rem;
+}
+
+footer a {
+	font-size: 16px;
+	font-weight: 600;
+
+	padding: 0.5em;
+	display: inline-block;
+	
+	border-radius: 0.33em;
+	color: rgba(255,255,255, 0.5);
+	background-color: transparent;
+	transition: background-color 0.1s ease-in-out;
+}
+
+footer a:hover {
+	text-decoration: none;
+	background-color: rgba(255,255,255, 0.05);
+}
+
+/* --- Desktop Styles --- */
+
+@media (min-width: 640px) {
+	
+	html {
+		font-size: 24px;
+	}
+	
+	header {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin-top: 2rem;
+	}
+	
+	header img {
+		margin-right: 1rem;
+	}
+	
+	header .title {
+		text-align: left;
+	}
+	
+	#links {
+		flex-direction: row;
+	}
+	
+	#links a {
+		margin-left: 0.75rem;
+		margin-right: 0.75rem;
+	}
+	
+}
