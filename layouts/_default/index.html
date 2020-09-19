@@ -1,13 +1,13 @@
 {{ define "main" }}
 <div id="demo">
 	<figure>
-		<img src="/images/hero.jpg" alt="Spanner in action">
+		<img src="images/hero.jpg" alt="Spanner in action">
 		
-		<video id="spinner" autobuffer preload playsinline autoplay muted loop style="opacity:0">
-			<source type="video/mp4" src="/images/spinner.mp4">
+		<video id="spinner" autobuffer preload playsinline autoplay muted loop style="opacity:1">
+			<source type="video/mp4" src="images/spinner.mp4">
 		</video>
-		<video id="intro-video" autobuffer preload playsinline autoplay muted>
-			<source type="video/mp4" src="/images/intro.mp4">
+		<video poster="images/intro.jpg" id="intro-video" autobuffer preload playsinline autoplay muted>
+			<source type="video/mp4" src="images/intro.mp4">
 		</video>
 		<script type="text/javascript">
 			const video = document.getElementById('intro-video');
