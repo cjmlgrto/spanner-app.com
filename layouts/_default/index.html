@@ -1,13 +1,13 @@
 {{ define "main" }}
 <div id="demo">
 	<figure>
-		<img src="images/hero.jpg" alt="Spanner in action">
+		<img src="/images/hero.jpg" alt="Spanner in action">
 		
-		<video id="spinner" autobuffer preload playsinline autoplay loop style="opacity:0">
-			<source type="video/mp4" src="images/spinner.mp4">
+		<video id="spinner" autobuffer preload playsinline autoplay muted loop style="opacity:0">
+			<source type="video/mp4" src="/images/spinner.mp4">
 		</video>
-		<video poster="images/intro.jpg" id="intro-video" autobuffer preload playsinline autoplay>
-			<source type="video/mp4" src="images/intro.mp4">
+		<video id="intro-video" autobuffer preload playsinline autoplay muted>
+			<source type="video/mp4" src="/images/intro.mp4">
 		</video>
 		<script type="text/javascript">
 			const video = document.getElementById('intro-video');
@@ -25,7 +25,7 @@
 </div>
 <div id="links">
 	<a href="https://apps.apple.com/us/app/id1531557702" class="download">Download app</a>
-	<a href="https://github.com/cjmlgrto/spanner-hugo-example/archive/main.zip" class="example" target="_blank">Get Example</a>
+	<a href="https://github.com/cjmlgrto/spanner-app.com/archive/main.zip" class="example" target="_blank">Get Example</a>
 </div>
 <div id="content">
 	{{ .Content }}
