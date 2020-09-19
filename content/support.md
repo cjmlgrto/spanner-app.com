@@ -1,5 +1,6 @@
 +++
 title = "Common Questions"
+aliases = ["/support.html"]
 +++
 
 ## What is Hugo?
