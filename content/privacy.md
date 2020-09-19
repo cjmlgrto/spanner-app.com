@@ -1,6 +1,5 @@
 +++
 title = "Privacy Information"
-aliases = ["/privacy.html"]
 +++
 
 Spanner does not collect any user data nor gather any analytics.
