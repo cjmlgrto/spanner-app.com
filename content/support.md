@@ -12,7 +12,7 @@ Spanner wraps Hugo's command line interface in a graphical user interface, allow
 
 ## How do I use Spanner?
 
-Drag and drop a Hugo site. Then, you can start/stop a local Hugo server, or even build and export your site. If you never used Hugo before, you can download a sample project to use with Spanner.
+Drag and drop a Hugo site. Then, you can start/stop a local Hugo server, or even build and export your site. If you never used Hugo before, you can [download this website](https://github.com/cjmlgrto/spanner-app.com/archive/main.zip) as a sample project to use with Spanner.
 
 ## Do I need to install Hugo to use Spanner?
 
